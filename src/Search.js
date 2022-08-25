@@ -83,7 +83,7 @@ function Search() {
             "Content-Type": "application/json",
           },
         });
-        let result = await input.json();
+        await input.json();
       } catch (error) {
         console.log(error);
         return;
