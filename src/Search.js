@@ -169,7 +169,7 @@ function Search() {
       <section className="companies">
         <div className="companies-header">
           <h2 className="section-name companies__section-name">
-            Company search
+            Search by company
           </h2>
         </div>
       </section>
