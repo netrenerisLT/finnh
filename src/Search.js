@@ -168,9 +168,7 @@ function Search() {
     <>
       <section className="companies">
         <div className="companies-header">
-          <h2 className="section-name companies__section-name">
-            Search by company
-          </h2>
+          <h2 className="section-name companies__section-name">Search</h2>
         </div>
       </section>
       <div className="search">
