@@ -3,18 +3,19 @@ import Activity from "./model/activity.js";
 import mongoose from "mongoose";
 import fs from "fs/promises";
 import cors from "cors";
-import path from "path";
 
 const app = express();
 app.use(cors());
 //Konfigūracija POST/PUT metodu perduodamų duomenų priėmimui
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); //get post date in nodejs
-app.use(express.static(path.join(__dirname, "../build")));
 
-await mongoose.connect("mongodb://localhost:27017/test");
+const mongoDbUrl =
+  "mongodb+srv://test:JoNaSS123kK@cluster-test.twy2twg.mongodb.net/?retryWrites=true&w=majority";
+await mongoose.connect(mongoDbUrl);
+// await mongoose.connect("mongodb://localhost:27017/test");
 const file = "./src/model/webActivity.json";
-app.post("/", async (req, res) => {
+app.put("/", async (req, res) => {
   try {
     let userActivity = new Activity(req.body);
     let user = await userActivity.save();
@@ -32,20 +33,6 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.use(function (req, res, next) {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://finn-360520.oa.r.appspot.com"
-  );
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
 app.listen(process.env.PORT || 8080, () =>
   console.log(`listening on port ${process.env.PORT || 8080}`)
 );

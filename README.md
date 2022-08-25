@@ -1,6 +1,6 @@
 # Hello, this app let you check NASDAQ companies stocks.
 
-Try this project on:
+Try this project on: https://master.d17jby4lh2l9cp.amplifyapp.com/
 
 ## Available Scripts
 
