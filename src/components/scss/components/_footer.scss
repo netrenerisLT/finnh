@@ -1,0 +1,48 @@
+@import "./var";
+@import "./mediaQ";
+
+.footer {
+  font-size: $font-size-22;
+  background-color: $color-violet;
+  color: $color-white;
+  padding: 70px 0 40px 0;
+  margin: 0 auto;
+  &__elements {
+    margin: $margin-sides;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__contact-me {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+  &__project-contact-me {
+    font-family: "Kanit";
+    font-size: $font-size-28;
+    margin-bottom: 20px;
+  }
+  &__project-email {
+    margin-bottom: 60px;
+    font-size: $font-size-18;
+  }
+  &__foot-bar {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+  }
+  &__logo {
+    font-family: "Kanit";
+    margin: $margin-sides;
+  }
+  &__social-icons img {
+    filter: invert(100%) sepia(0%) saturate(4215%) hue-rotate(36deg)
+      brightness(104%) contrast(102%);
+    width: 25px;
+    margin-left: 25px;
+  }
+}

@@ -1,0 +1,27 @@
+@mixin responsive__375() {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+@mixin responsive__768() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin responsive__1024() {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin responsive__1440() {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin responsive__1920() {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}

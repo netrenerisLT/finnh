@@ -1,0 +1,102 @@
+@import "./var";
+@import "./mediaQ";
+
+.nav-bar {
+  display: flex;
+  margin: $margin-sides;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-family: "Kanit";
+  margin: 0 auto;
+
+  @include responsive__375 {
+    font-size: $font-size-22;
+  }
+  @include responsive__768 {
+    font-size: $font-size-22;
+    margin-bottom: 0px;
+    max-width: 1440px;
+  }
+  &__logo {
+    margin: $margin-sides;
+
+    @include responsive__768 {
+      font-size: $font-size-32;
+    }
+  }
+  &__nav {
+    margin: $margin-sides;
+    margin-left: auto;
+  }
+  &__list {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  margin-top: 50px;
+  margin: $margin-sides;
+  height: 450px;
+  text-align: center;
+  margin: 0 auto;
+
+  @include responsive__768 {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+    height: 500px;
+    max-width: 1440px;
+    align-content: center;
+  }
+  &__name {
+    margin-bottom: 20px;
+    font-size: $font-size-32;
+    color: $color-violet;
+    text-transform: uppercase;
+    margin: $margin-sides;
+    font-family: "Kanit";
+
+    @include responsive__768 {
+      font-size: $font-size-42;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+  }
+  &__about {
+    margin-bottom: 60px;
+    margin: $margin-sides;
+    font-size: $font-size-18;
+
+    @include responsive__768 {
+      margin-bottom: 48px;
+      text-align: left;
+      padding-right: 50px;
+      max-width: 40vw;
+    }
+  }
+  &__img {
+    background: url("https://i.imgur.com/IJjmCX7.png");
+    margin: $margin-sides;
+    display: block;
+    height: 100%;
+    width: 60vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include responsive__768 {
+      background: url("https://i.imgur.com/IJjmCX7.png");
+      height: 100%;
+      width: 50vw;
+      max-width: 600px;
+      margin-left: auto;
+      background-position: right;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}

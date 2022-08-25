@@ -1,0 +1,94 @@
+@import "./var";
+@import "./mediaQ";
+
+.section-name {
+  @extend %font-section;
+  padding-top: 70px;
+  background-color: $color-white;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.search-card {
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include responsive__768 {
+    flex-direction: row;
+  }
+}
+.companies,
+.search {
+  background-color: $color-white;
+  margin: 0 auto;
+}
+.search-input {
+  font-size: $font-size-18;
+  margin: $margin-sides;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 80px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  &__input {
+    background-color: $color-grey;
+    font-size: $font-size-14;
+    padding: 15px;
+    color: $color-dark;
+  }
+  &__submit {
+    @extend %button-default;
+  }
+  &__stocks-card {
+    display: flex;
+    font-size: $font-size-16;
+    justify-content: space-between;
+    padding: 10px;
+  }
+}
+
+.company-card {
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-20;
+  color: $color-dark;
+  background-color: $color-grey;
+  margin-top: 30px;
+  &__title {
+    font-family: "Kanit";
+
+    font-size: $font-size-28;
+    padding: 20px 20px 0 20px;
+    cursor: pointer;
+  }
+  &__about {
+    padding: 10px 20px 20px 20px;
+  }
+  &__url {
+    @extend %button-default;
+    padding: 15px;
+  }
+  &__stocks {
+    @extend %button-default;
+    background-color: orange;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: $font-size-16;
+  }
+}
+
+.wrong-input {
+  transition: ease-in 2s;
+  background-color: $color-red;
+  font-size: $font-size-14;
+  color: $color-white;
+  padding: 15px;
+}
