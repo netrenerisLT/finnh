@@ -39,9 +39,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column-reverse;
-  margin-top: 50px;
+  margin-top: 20px;
   margin: $margin-sides;
-  height: 450px;
+  height: 400px;
   text-align: center;
   margin: 0 auto;
 
@@ -71,7 +71,7 @@
     margin-bottom: 60px;
     margin: $margin-sides;
     font-size: $font-size-18;
-
+    padding-bottom: 40px;
     @include responsive__768 {
       margin-bottom: 48px;
       text-align: left;

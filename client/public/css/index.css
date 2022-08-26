@@ -1,0 +1,558 @@
+/***
+    The new CSS reset - version 1.6.1 (last updated 25.5.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-webkit-input-placeholder {
+  color: unset;
+}
+::-moz-placeholder {
+  color: unset;
+}
+:-ms-input-placeholder {
+  color: unset;
+}
+::-ms-input-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly. */
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+.section-name {
+  font-family: "Kanit";
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 40px;
+}
+
+.company-card__stocks, .company-card__url, .search-input__submit {
+  font-size: 16px;
+  font-family: "Kanit";
+  background: #241561;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(16, 16, 20);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root {
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+}
+
+.fade-in {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 5vw;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-family: "Kanit";
+  margin: 0 auto;
+}
+@media (min-width: 375px) {
+  .nav-bar {
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) {
+  .nav-bar {
+    font-size: 22px;
+    margin-bottom: 0px;
+    max-width: 1440px;
+  }
+}
+.nav-bar__logo {
+  margin: 0 5vw;
+}
+@media (min-width: 768px) {
+  .nav-bar__logo {
+    font-size: 32px;
+  }
+}
+.nav-bar__nav {
+  margin: 0 5vw;
+  margin-left: auto;
+}
+.nav-bar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+.header-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin-top: 20px;
+  margin: 0 5vw;
+  height: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .header-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0px;
+    height: 500px;
+    max-width: 1440px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+.header-info__name {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #241561;
+  text-transform: uppercase;
+  margin: 0 5vw;
+  font-family: "Kanit";
+}
+@media (min-width: 768px) {
+  .header-info__name {
+    font-size: 42px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+}
+.header-info__about {
+  margin-bottom: 60px;
+  margin: 0 5vw;
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .header-info__about {
+    margin-bottom: 48px;
+    text-align: left;
+    padding-right: 50px;
+    max-width: 40vw;
+  }
+}
+.header-info__img {
+  background: url("https://i.imgur.com/IJjmCX7.png");
+  margin: 0 5vw;
+  display: block;
+  height: 100%;
+  width: 60vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .header-info__img {
+    background: url("https://i.imgur.com/IJjmCX7.png");
+    height: 100%;
+    width: 50vw;
+    max-width: 600px;
+    margin-left: auto;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.section-name {
+  font-family: "Kanit";
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 40px;
+}
+
+.company-card__stocks, .company-card__url, .search-input__submit {
+  font-size: 16px;
+  font-family: "Kanit";
+  background: #241561;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(16, 16, 20);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root {
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+}
+
+.fade-in {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.footer {
+  font-size: 22px;
+  background-color: #241561;
+  color: rgb(255, 255, 255);
+  padding: 70px 0 40px 0;
+  margin: 0 auto;
+}
+.footer__elements {
+  margin: 0 5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.footer__contact-me {
+  grid-column: 1/-1;
+  text-align: center;
+}
+.footer__project-contact-me {
+  font-family: "Kanit";
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.footer__project-email {
+  margin-bottom: 60px;
+  font-size: 18px;
+}
+.footer__foot-bar {
+  grid-column: 1/-1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 60px;
+}
+.footer__logo {
+  font-family: "Kanit";
+  margin: 0 5vw;
+}
+.footer__social-icons img {
+  -webkit-filter: invert(100%) sepia(0%) saturate(4215%) hue-rotate(36deg) brightness(104%) contrast(102%);
+          filter: invert(100%) sepia(0%) saturate(4215%) hue-rotate(36deg) brightness(104%) contrast(102%);
+  width: 25px;
+  margin-left: 25px;
+}
+
+.section-name {
+  font-family: "Kanit";
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 40px;
+}
+
+.company-card__stocks, .company-card__url, .search-input__submit {
+  font-size: 16px;
+  font-family: "Kanit";
+  background: #241561;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(16, 16, 20);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root {
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+}
+
+.fade-in {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.section-name {
+  padding-top: 70px;
+  background-color: rgb(255, 255, 255);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.search-card {
+  background-color: rgb(255, 255, 255);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 768px) {
+  .search-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.companies,
+.search {
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+}
+
+.search-input {
+  font-size: 18px;
+  margin: 0 5vw;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 80px;
+}
+.search-input__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 10px;
+}
+.search-input__input {
+  background-color: rgb(245, 245, 245);
+  font-size: 14px;
+  padding: 15px;
+  color: rgb(16, 16, 20);
+}
+.search-input__stocks-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+
+.company-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 20px;
+  color: rgb(16, 16, 20);
+  background-color: rgb(245, 245, 245);
+  margin-top: 30px;
+}
+.company-card__title {
+  font-family: "Kanit";
+  font-size: 28px;
+  padding: 20px 20px 0 20px;
+  cursor: pointer;
+}
+.company-card__about {
+  padding: 10px 20px 20px 20px;
+}
+.company-card__url {
+  padding: 15px;
+}
+.company-card__stocks {
+  background-color: orange;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.wrong-input {
+  -webkit-transition: ease-in 2s;
+  transition: ease-in 2s;
+  background-color: #d22828;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+}
