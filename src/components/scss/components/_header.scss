@@ -39,11 +39,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column-reverse;
-  margin-top: 20px;
-  margin: $margin-sides;
   height: 400px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 
   @include responsive__768 {
     flex-direction: row;
@@ -68,10 +66,8 @@
     }
   }
   &__about {
-    margin-bottom: 60px;
-    margin: $margin-sides;
     font-size: $font-size-18;
-    padding-bottom: 40px;
+    margin: $margin-sides;
     @include responsive__768 {
       margin-bottom: 48px;
       text-align: left;

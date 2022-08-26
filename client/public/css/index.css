@@ -207,11 +207,9 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  margin-top: 20px;
-  margin: 0 5vw;
   height: 400px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 @media (min-width: 768px) {
   .header-info {
@@ -245,10 +243,8 @@ body {
   }
 }
 .header-info__about {
-  margin-bottom: 60px;
-  margin: 0 5vw;
   font-size: 18px;
-  padding-bottom: 40px;
+  margin: 0 5vw;
 }
 @media (min-width: 768px) {
   .header-info__about {
