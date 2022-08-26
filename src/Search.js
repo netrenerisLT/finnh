@@ -195,6 +195,7 @@ function Search() {
                     max={new Date().toLocaleDateString("lt-LT")}
                     onChange={(e) => setDateFrom(e.target.value)}
                     value={dateFrom}
+                    placeholder="yyyy-mm-dd"
                   />
                 </div>
                 <div>
@@ -206,6 +207,7 @@ function Search() {
                     max={new Date().toLocaleDateString("lt-LT")}
                     onChange={(e) => setDateTo(e.target.value)}
                     value={dateTo}
+                    placeholder="yyyy-mm-dd"
                   />
                 </div>
               </div>
