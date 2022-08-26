@@ -83,7 +83,7 @@ function Search() {
             "Content-Type": "application/json",
           },
         });
-        await input.json();
+        let result = await input.json();
       } catch (error) {
         console.log(error);
         return;
@@ -168,7 +168,9 @@ function Search() {
     <>
       <section className="companies">
         <div className="companies-header">
-          <h2 className="section-name companies__section-name">Search</h2>
+          <h2 className="section-name companies__section-name">
+            Company search
+          </h2>
         </div>
       </section>
       <div className="search">

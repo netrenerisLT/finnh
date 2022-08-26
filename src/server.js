@@ -10,16 +10,13 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); //get post date in nodejs
 
-const mongoDbUrl =
-  "mongodb+srv://test:JoNaSS123kK@cluster-test.twy2twg.mongodb.net/?retryWrites=true&w=majority";
-await mongoose.connect(mongoDbUrl);
-// await mongoose.connect("mongodb://localhost:27017/test");
+await mongoose.connect("mongodb://localhost:27017/test");
 const file = "./src/model/webActivity.json";
-app.put("/", async (req, res) => {
+app.post("/", async (req, res) => {
   try {
     let userActivity = new Activity(req.body);
     let user = await userActivity.save();
-    res.send(JSON.stringify(user));
+    res.send(user);
 
     /* ====================== Saves user action in local storage ====================== */
     let data = await fs.readFile(file, "utf8");
