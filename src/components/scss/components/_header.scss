@@ -51,6 +51,9 @@
     max-width: 1440px;
     align-content: center;
   }
+  &__left-block {
+    margin-bottom: 20px;
+  }
   &__name {
     margin-bottom: 20px;
     font-size: $font-size-32;

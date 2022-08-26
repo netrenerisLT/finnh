@@ -227,6 +227,9 @@ body {
         align-content: center;
   }
 }
+.header-info__left-block {
+  margin-bottom: 20px;
+}
 .header-info__name {
   margin-bottom: 20px;
   font-size: 32px;
