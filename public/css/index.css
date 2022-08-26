@@ -209,11 +209,9 @@ body {
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  margin-top: 50px;
-  margin: 0 5vw;
-  height: 450px;
+  height: 400px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 @media (min-width: 768px) {
   .header-info {
@@ -231,6 +229,9 @@ body {
     align-content: center;
   }
 }
+.header-info__left-block {
+  margin-bottom: 20px;
+}
 .header-info__name {
   margin-bottom: 20px;
   font-size: 32px;
@@ -247,9 +248,8 @@ body {
   }
 }
 .header-info__about {
-  margin-bottom: 60px;
-  margin: 3vw 5vw;
   font-size: 18px;
+  margin: 0 5vw;
 }
 @media (min-width: 768px) {
   .header-info__about {
