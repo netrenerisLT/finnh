@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "node ./src/server.js",
-    "start2": "concurrently \"npm run server\" \"npm run client\"",
+    "both": "concurrently \"npm run server\" \"npm run client\"",
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
