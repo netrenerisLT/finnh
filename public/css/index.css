@@ -539,8 +539,10 @@ body {
 .company-card__title {
   font-family: "Kanit";
   font-size: 28px;
+  font-weight: bold;
   padding: 20px 20px 0 20px;
   cursor: pointer;
+  color: #241561;
 }
 .company-card__about {
   padding: 10px 20px 20px 20px;
