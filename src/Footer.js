@@ -14,7 +14,7 @@ function Footer() {
           </a>
         </div>
         <div className="footer__foot-bar">
-          <p className="footer__logo">IBM FinnHub</p>
+          <p className="footer__logo">FinnHub</p>
           <div className="footer__social-icons">
             <a href="https://www.facebook.com" target="blank">
               <img

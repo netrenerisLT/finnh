@@ -20,7 +20,7 @@ function Navbar() {
     <header className="header">
       <section className="nav-bar">
         <a className="nav-bar__logo" href="/">
-          IBM FinnHub
+          FinnHub
         </a>
         <nav className="nav-bar__nav">
           <ul className="nav-bar__list">

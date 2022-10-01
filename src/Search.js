@@ -183,7 +183,7 @@ function Search() {
                 className="search-input__input"
                 onChange={(e) => setSearchInput(e.target.value)}
                 value={searchInput.toLocaleUpperCase()}
-                placeholder="Company's Ticker Symbol"
+                placeholder="Company's Ticker Symbol (e.g.TSLA)"
               />
               <div className="search-input__stocks-card">
                 <div>
